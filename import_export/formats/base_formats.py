@@ -173,7 +173,7 @@ class XLSX(TablibFormat):
         """
         from io import BytesIO
         import openpyxl
-        xlsx_book = openpyxl.load_workbook(BytesIO(in_stream), read_only=True)
+        xlsx_book = openpyxl.load_workbook(BytesIO(in_stream), read_only=True, data_only=True)
 
         dataset = tablib.Dataset()
         sheet = xlsx_book.active
